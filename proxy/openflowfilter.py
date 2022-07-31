@@ -72,7 +72,7 @@ def filterOpenflow(frame):
                 # The datapath_id is already registered for another device
                 if openflow.datapath_id in [ x.dpid for x in devices.values() ]:
                     print(f'Datapath_id: {openflow.datapath_id} is already known')
-                    return False;
+                    return False
 
                 print(f"Create new device {key} with datapath_id {openflow.datapath_id}")
                 devices[key] = createDeviceEntry(frame, openflow)
