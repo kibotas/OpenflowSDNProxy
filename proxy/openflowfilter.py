@@ -54,13 +54,17 @@ def filterOpenflow(frame):
    
     # Cannot parse openflow header
     if openflow is None :
-        print("Cannot parse openflow header")
-        # Filter TCP Handshake
+        return False
+
+    version = hex(bytes(openflow)[0])
+    if version not in supported_versions:
+        print(f"Unsupported Openflow version {version}")
         return False
 
 
     # Check if data contains Openflow 1.0 or 1.3 data
     if issubclass(type(openflow), (_ofp_header, ofp_3._ofp_header)):
+
 
         # Only the OFPT_FEATURES_REPLY (type 6) header does contain the datapath_id
         if openflow.type == 6:
@@ -72,7 +76,7 @@ def filterOpenflow(frame):
                 # The datapath_id is already registered for another device
                 if openflow.datapath_id in [ x.dpid for x in devices.values() ]:
                     print(f'Datapath_id: {openflow.datapath_id} is already known')
-                    return False
+                    return False;
 
                 print(f"Create new device {key} with datapath_id {openflow.datapath_id}")
                 devices[key] = createDeviceEntry(frame, openflow)
@@ -86,6 +90,7 @@ def filterOpenflow(frame):
                     return False
        
                 print(f"Device {key} {devices[key].dpid} sends message of type {openflow.type}") 
+        print(f"Device {key} sends message of type {openflow.type}") 
         return True
     
     return False
