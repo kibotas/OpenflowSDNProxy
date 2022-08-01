@@ -1,5 +1,14 @@
 # OpenflowSDNProxy
+
+## Description
 Experimental proxy for ONOS Openflow SDN controller.
+The proxy utilizes a eBPF module to filter incoming TCP segments on a raw socket.
+Openflow traffic is then further filtered by a userspace filter written in python3.
+
+## Test Environment
+The test-environment consists of three virtual machines ( controller, proxy, attacker ),
+configured with Vagrant and managed with VirtualBox.
+
 
 ## Repo Structure
 | File | Purpose |
