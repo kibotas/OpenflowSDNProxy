@@ -97,4 +97,3 @@ def switchFuckup():
 #helloWrongVersion()
 #lameSwitch()
 openflowHandshake()
-#switchFuckup()
