@@ -8,6 +8,7 @@ Openflow traffic is then further filtered by a userspace filter written in pytho
 ## Test Environment
 The test-environment consists of three virtual machines ( controller, proxy, attacker ),
 configured with Vagrant and managed with VirtualBox.
+The environment was created and tested on a Ubuntu 22.04 machine.
 
 
 ## Repo Structure
