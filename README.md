@@ -1,4 +1,4 @@
-# OpenflowSDNProxy
+# OpenflowSDNProxy Prototype
 
 ## Description
 Experimental proxy for ONOS Openflow SDN controller.
@@ -43,3 +43,13 @@ Switch to the /data directory and execute the proxy with './startProxy.sh'
 Connect to the attacker VM with 'vagrant ssh attacker'.
 Switch to the /data directory and execute an attack scenario with 'python3 attacker.py'.
 The scenarios can be selected at the bottom of the python script.
+
+## Possible Enhancements
+
+1. Preventing SYN flood attacks
+2. Usage of config file
+3. Collecting and utilizing runtime statistics
+4. Make eBPF module configurable by the wrapper script / from userspace
+5. Configurable VM network-interface names
+6. Managing the proxy with a systemd unit
+7. Webpage to monitor and manage blocking/forwarding of traffic
