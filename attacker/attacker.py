@@ -89,7 +89,7 @@ def openflowHandshake():
         #time.sleep(1000)
         '''
 
-def switchFuckup():
+def fastHandshake():
     while(True):
         openflowHandshake()
         
@@ -97,3 +97,4 @@ def switchFuckup():
 #helloWrongVersion()
 #lameSwitch()
 openflowHandshake()
+#fastHandshake()
