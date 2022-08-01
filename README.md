@@ -29,16 +29,16 @@ The environment was created and tested on a Ubuntu 22.04 machine.
 - Vagrant ( https://www.vagrantup.com/ )
 - Virtualbox ( https://www.virtualbox.org/ )
 
-## Starting the Test-Environment
+## Starting of the Test-Environment
 
-Creating the virtual machines with the 'startTestEnvironment.sh' script
+Create the virtual machines with the 'startTestEnvironment.sh' script
 
-## Starting the proxy
+## Starting of the proxy
 
 Connect to the proxy VM with 'vagrant ssh proxy'.
 Switch to the /data directory and execute the proxy with './startProxy.sh'
 
-## Launching test/attack scripts
+## Launching of test/attack scripts
 
 Connect to the attacker VM with 'vagrant ssh attacker'.
 Switch to the /data directory and execute an attack scenario with 'python3 attacker.py'.
