@@ -2,13 +2,15 @@
 Experimental proxy for ONOS Openflow SDN controller.
 
 ## Repo Structure
-attacker/               : Contains attack scripts for testing purposes
-controller/             : Contains the ONOS controller Dockerfile and docker-compose.yaml
-proxy/                  : Contains the proxy code
-provisionVM.sh          : Is used to provision the three VMs
-startTestEnvironment.sh : Is used to deploy the test environment
-stopTestEnvironment.sh  : Is used to destroy/cleanuo the test environment
-Vagrantfile             : Is used to deploy the VMs
+| File | Purpose |
+| ----------- | ----------- |
+| attacker/               | Contains attack scripts for testing purposes |
+| controller/             | Contains the ONOS controller Dockerfile and docker-compose.yaml |
+| proxy/                  | Contains the proxy code | 
+| provisionVM.sh          | Is used to provision the three VMs |
+| startTestEnvironment.sh | Is used to deploy the test environment |
+| stopTestEnvironment.sh  | Is used to destroy/cleanuo the test environment |
+| Vagrantfile             | Is used to deploy the VMs |
 
 
 ## Prerequisites
