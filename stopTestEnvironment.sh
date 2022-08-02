@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vagrant down --force --parallel
+vagrant destroy --force --parallel
